@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px 18px;
+}
+
+.calculator {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #667085;
+  margin: 8px 0 20px;
+}
+
+.formula {
+  background: #eef4ff;
+  border-left: 5px solid #2563eb;
+  padding: 16px;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #172033;
+}
+
+button.secondary:hover {
+  background: #d1d5db;
+}
+
+.error {
+  min-height: 22px;
+  color: #b42318;
+  margin: 12px 0 0;
+}
+
+.result {
+  margin-top: 18px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.result-label {
+  color: #475467;
+  font-size: 15px;
+}
+
+.value {
+  margin-top: 8px;
+  font-size: 38px;
+  font-weight: 700;
+  color: #166534;
+}
+
+.per-sqft {
+  margin-top: 8px;
+  color: #475467;
+}
+
+.breakdown {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.breakdown h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.breakdown p {
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.note {
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .calculator {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .value {
+    font-size: 30px;
+  }
+}

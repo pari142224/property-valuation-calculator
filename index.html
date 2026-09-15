@@ -1,6 +1,69 @@
-const marketValue =
-    -48.61
-    + 0.1256 * area
-    - 5.3268 * age
-    + 14.5651 * distance
-    - 2.6107 * locationScore;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Market Value Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="calculator">
+      <h1>Property Market Value Calculator</h1>
+      <p class="subtitle">Multiple Regression Model</p>
+
+      <div class="formula">
+        MV = −48.61 + 0.1256(Area) − 5.3268(Age)
+        + 14.5651(Distance) − 2.6107(Location Score)
+      </div>
+
+      <div class="inputs">
+        <div class="field">
+          <label for="area">Area (sq.ft.)</label>
+          <input id="area" type="number" min="1" step="0.01" value="1500">
+        </div>
+
+        <div class="field">
+          <label for="age">Property Age (years)</label>
+          <input id="age" type="number" min="0" step="0.1" value="10">
+        </div>
+
+        <div class="field">
+          <label for="distance">Distance from CBD (km)</label>
+          <input id="distance" type="number" min="0" step="0.01" value="5">
+        </div>
+
+        <div class="field">
+          <label for="locationScore">Location Score (0–10)</label>
+          <input id="locationScore" type="number" min="0" max="10" step="0.01" value="8">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="calculate">Calculate Market Value</button>
+        <button id="reset" class="secondary">Reset</button>
+      </div>
+
+      <p id="error" class="error"></p>
+
+      <div class="result">
+        <div class="result-label">Predicted Market Value</div>
+        <div id="marketValue" class="value">₹0.00</div>
+        <div id="perSqft" class="per-sqft">Predicted value per sq.ft.: ₹0.00</div>
+      </div>
+
+      <div class="breakdown">
+        <h2>Calculation Breakdown</h2>
+        <p id="calculation"></p>
+      </div>
+
+      <p class="note">
+        Note: The result is a statistical model prediction and should be interpreted
+        using the model's original units, training range, and validation results.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
